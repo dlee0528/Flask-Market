@@ -12,8 +12,13 @@ def about_page(username):
 
 @app.route('/market')
 def market_page():
-    return render_template('market.html', item_name='Phone')
+    items = [
+        {'id':1, 'name': 'Phone', 'barcode': '1124', 'price': 500},
+        {'id':2, 'name': 'Laptop', 'barcode': '6938', 'price': 800},
+        {'id':3, 'name': 'Keyboard', 'barcode': '4342', 'price': 140}
+    ]
+    return render_template('market.html', items=items)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000)
