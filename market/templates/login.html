@@ -1,33 +1,34 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Register Page
+    Login Page
 {% endblock %}
 
 {% block content %}
     <div class="text-center">
         <div class="container">
-            <form method="POST" class="form-register" style="color: white">
+            <form method="POST" class="form-signin" style="color: white">
                 {{ form.hidden_tag() }}
                 <img class="mb-4" src="https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg" height="300">
                 <h1 class="h3 mb-3 fnot-wiehgt-normal">
-                    Please Create Your Account
+                    Please Login
                 </h1>
 
                 {{form.username.label()}}
                 {{form.username(class="form-control", placeholder="Username")}}
     
-                {{form.email_address.label()}}
-                {{form.email_address(class="form-control", placeholder="Email Address")}}
+                {{form.password.label()}}
+                {{form.password(class="form-control", placeholder="Password")}}
     
-                {{form.password1.label()}}
-                {{form.password1(class="form-control", placeholder="Password")}}
-    
-                {{form.password2.label()}}
-                {{form.password2(class="form-control", placeholder="Confirm Password")}}
                 <br>
-                
+
+                <div class="checkbox mb-3">
+                    <h6>Do you have an account?</h6>
+                    <a href="{{ url_for('register_page') }}" class="btn btn-sm btn-secondary">Login</a>
+                </div>
+
                 {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
             </form>
         </div>
     </div>
