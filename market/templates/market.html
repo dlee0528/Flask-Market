@@ -21,7 +21,6 @@
       </thead>
       <tbody>
           {% for item in items %}
-          <!-- modals now have access to each item -->
           {% include 'includes/items_modals.html' %} 
               <tr>
                   <th scope="row">{{ item.id }}</th>
@@ -29,8 +28,8 @@
                   <td>{{ item.barcode }}</td>
                   <td>${{ item.price }}</td>
                   <td>
-                    <button class="btn btn-outline btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal-{{ item.id }}">Info</button>
-                    <button class="btn btn-outline btn-success">Buy</button>
+                    <button class="btn btn-outline btn-info" data-bs-toggle="modal" data-bs-target="#infoModal-{{ item.id }}">Info</button>
+                    <button class="btn btn-outline btn-success" data-bs-toggle="modal" data-bs-target="#purchaseModal-{{ item.id }}">Buy</button>
                   </td>
               </tr>
           {% endfor %}
