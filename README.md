@@ -1,5 +1,4 @@
 # Flask Market
-- [Tutorial](https://www.youtube.com/watch?v=Qr4QMBUPxWo&list=RDCMUC8butISFwT-Wl7EV0hUK0BQ&start_radio=1&rv=Qr4QMBUPxWo&t=21827&t=21827)
 
 ## Technologies
 - Python3
